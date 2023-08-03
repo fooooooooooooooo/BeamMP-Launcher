@@ -25,6 +25,7 @@ int main(int argc, char* argv[]) {
         std::thread th(flush);
         th.detach();
     #endif
+
     GetEP(argv[0]);
 
     InitLauncher(argc,argv);
