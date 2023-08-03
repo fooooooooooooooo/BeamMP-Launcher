@@ -286,20 +286,20 @@ void LegitimacyCheck(){
     }else lowExit(2);
     K2.clear();
     RegCloseKey(hKey);*/
-    std::string Result;
-    std::string K3 = R"(Software\BeamNG\BeamNG.drive)";
-    HKEY hKey;
-    LONG dwRegOPenKey = OpenKey(HKEY_CURRENT_USER, K3.c_str(), &hKey);
-    if(dwRegOPenKey == ERROR_SUCCESS) {
-        Result = QueryKey(hKey, 3);
-        if(Result.empty())lowExit(3);
-        //if(IDCheck(Result,T))lowExit(5);
-        GameDir = Result;
-        //TraceBack++;
-    }else lowExit(4);
-    K3.clear();
-    Result.clear();
-    RegCloseKey(hKey);
+    // std::string Result;
+    // std::string K3 = R"(Software\BeamNG\BeamNG.drive)";
+    // HKEY hKey;
+    // LONG dwRegOPenKey = OpenKey(HKEY_CURRENT_USER, K3.c_str(), &hKey);
+    // if(dwRegOPenKey == ERROR_SUCCESS) {
+    //     Result = QueryKey(hKey, 3);
+    //     if(Result.empty())lowExit(3);
+    //     //if(IDCheck(Result,T))lowExit(5);
+    //     GameDir = Result;
+    //     //TraceBack++;
+    // }else lowExit(4);
+    // K3.clear();
+    // Result.clear();
+    // RegCloseKey(hKey);
     //if(TraceBack < 3)exit(-1);
 }
 std::string CheckVer(const std::string &dir){
